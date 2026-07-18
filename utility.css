@@ -1,24 +1,31 @@
-.rounded{
+.rounded {
     border-radius: 7px;
-} 
-.flex{
+}
+
+.flex {
     display: flex;
 }
-.justify-center{
+
+.justify-center {
     justify-content: center;
 }
-.items-center{
+
+.items-center {
     align-items: center;
 }
-.invert{
+
+.invert {
     filter: invert(1);
 }
-.m-1{
+
+.m-1 {
     margin: 5px;
 }
-.border{
+
+.border {
     border: 2px solid red;
 }
-.p-1{
+
+.p-1 {
     padding: 10px;
 }
