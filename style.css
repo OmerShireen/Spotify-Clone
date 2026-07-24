@@ -73,11 +73,56 @@
  .footer a {
      color: grey;
  }
- .header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #343434;
+
+ .header {
+     display: flex;
+     justify-content: space-between;
+     background-color: rgb(34, 34, 34);
  }
- .header > *{
-    padding: 20px;
+
+ .header>* {
+     padding: 20px;
+ }
+
+ .spotifyPlaylists {
+     padding: 16px;
+ }
+
+ .cardContainer {
+     display: flex;
+     gap: 10px;
+     flex-wrap: wrap;
+     margin: 30px;
+ }
+
+ .card {
+     width: 200px;
+     background-color: #252525;
+     padding: 10px;
+     border-radius: 5px;
+     position: relative;        
+ }
+
+ .card>* {
+     padding-top: 10px;
+ }
+
+ .card img {
+     width: 100%;
+     object-fit: contain;
+ }
+.play {
+     width: 28px;
+     height: 28px;
+     background-color: #1fdf64;
+     border-radius: 50%;
+     padding: 4px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     position: absolute;
+     bottom: 128px;
+     right: 19px;
+     opacity: var(--a);
+     transition: all 1s ease-out;
  }
