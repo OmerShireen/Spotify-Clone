@@ -68,10 +68,12 @@
      font-size: 10px;
      position: absolute;
      bottom: 0;
+      padding: 10px;
  }
 
  .footer a {
      color: grey;
+
  }
 
  .header {
