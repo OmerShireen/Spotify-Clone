@@ -169,11 +169,16 @@
      font-weight: bold;
      font-size: 17px;
  }
- .playbar{
-    position: absolute;
-    bottom: 0;
-    background-color: #1fdf64;
-    width: 95%;
-    padding: 10px;
-     
+
+ .playbar {
+     position: absolute;
+     bottom: 0;
+     background-color: #1fdf64;
+     width: 95%;
+     padding: 10px;
+ }
+ .songbuttons{
+    display: flex;
+    justify-content: center; 
+    gap: 12px;
  }
