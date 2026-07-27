@@ -25,5 +25,10 @@ async function main(){
     console.log(nasheeds);
     var audio = new Audio(nasheeds[6]);
     audio.play();
+
+    audio.addEventListener("loadeddata",()=>{
+        let duration = audio.duration;
+        console.log(duration); 
+    })
 }
 main() 
