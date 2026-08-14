@@ -11,8 +11,9 @@ async function getnasheeds(){
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".mp3")) {
-            nasheeds.push(element.href)
-            
+            let decoded = decodeURIComponent(element.href)
+            let fixed = decoded.replaceAll("\\", "/")
+            nasheeds.push(fixed.split("/nasheeds/")[1]) 
         }
         
     } 
@@ -23,7 +24,21 @@ async function getnasheeds(){
 async function main(){
     let nasheeds = await getnasheeds();
     console.log(nasheeds);
-    var audio = new Audio(nasheeds[6]);
+    let nasheedUL = document.querySelector(".nasheedlist").getElementsByTagName("ul")[0];
+    for (const nasheed of nasheeds ) {
+        nasheedUL.innerHTML  = nasheedUL.innerHTML + ` 
+        <li><img class="invert" src="img/music.svg" alt="">
+        <div class="info">
+            <div> ${nasheed}</div>
+            <div>Song Artist</div>
+        </div>
+        <div class="playnow">
+            <span>Play Now</span>
+            <img class="invert  " src="img/play.svg" alt="">    
+        </div>
+    </li>  `;
+    }
+    var audio = new Audio(nasheeds[2]);
     audio.play();
 
     audio.addEventListener("loadeddata",()=>{
